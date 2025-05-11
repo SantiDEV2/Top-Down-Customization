@@ -16,7 +16,13 @@ public class PlayerController : MonoBehaviour
     private const string ver = "Vertical";
     private const string lasthor = "LastHorizontal";
     private const string lastver = "LastVertical";
-        
+
+    [Header("Sprite Library")]
+    [SerializeField] private SpriteRenderer hatRenderer;
+    [SerializeField] private SpriteRenderer torsoRenderer;
+    [SerializeField] private SpriteRenderer legsRenderer;
+
+
     private bool isInventoryOpen = false;
 
     private void Start()
@@ -41,8 +47,11 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat(lasthor, moveInput.x);
             animator.SetFloat(lastver, moveInput.y);
         }
+    }
 
-        Debug.Log(moveInput);
+    private void UpdateSprite()
+    {
+
     }
 
     private void ShowInventory()

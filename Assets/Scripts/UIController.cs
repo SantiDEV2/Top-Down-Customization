@@ -4,6 +4,8 @@ public class UIController : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Canvas inventoryCanvas;
+    [SerializeField] private Canvas storeCanvas;
+    [SerializeField] private Canvas settingsCanvas;
 
     private void OnEnable()
     {

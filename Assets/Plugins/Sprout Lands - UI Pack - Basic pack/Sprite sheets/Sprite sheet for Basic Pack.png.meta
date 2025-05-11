@@ -2237,13 +2237,13 @@ TextureImporter:
       name: Sprite sheet for Basic Pack_51
       rect:
         serializedVersion: 2
-        x: 106
-        y: 218
-        width: 28
-        height: 28
+        x: 107
+        y: 219
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 4, y: 3, z: 4, w: 5}
       customData: 
       outline: []
       physicsShape: []
