@@ -17,3 +17,5 @@ MonoBehaviour:
   buyPrice: 0
   salePrice: 0
   isOwned: 0
+  slotType: 2
+  spriteLibrary: {fileID: 7108339969198208228, guid: a876b866cb6077d41bd09969a7123190, type: 3}
