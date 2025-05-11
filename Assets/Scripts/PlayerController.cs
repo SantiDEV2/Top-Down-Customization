@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     private const string lastver = "LastVertical";
 
     private bool isInventoryOpen = false;
+    private bool isStoreOpen = false;
+    private bool isInStoreZone = false;
 
     private void Start()
     {
@@ -28,6 +30,8 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         ShowInventory();
+        ShowStore();
+
         if (GameController.isGamePaused) return;
 
         moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
@@ -40,6 +44,23 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetFloat(lasthor, moveInput.x);
             animator.SetFloat(lastver, moveInput.y);
+        }
+    }
+
+    private void ShowStore()
+    {
+        if (isInStoreZone && Input.GetKeyDown(KeyCode.E))
+        {
+            isStoreOpen = !isStoreOpen;
+            if (isStoreOpen)
+            {
+                WatchCamera();
+                EventManager.TriggerEvent("StoreOpen", null);
+            }
+            else
+            {
+                EventManager.TriggerEvent("StoreClose", null);
+            }
         }
     }
 
@@ -57,6 +78,28 @@ public class PlayerController : MonoBehaviour
             {
                 EventManager.TriggerEvent("InventoryClose", null);
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Door"))
+        {
+            EventManager.TriggerEvent("SceneChange", null);
+        }
+        if (collision.CompareTag("StoreZone"))
+        {
+            isInStoreZone = true;
+            EventManager.TriggerEvent("EntryStore", null);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("StoreZone"))
+        {
+            isInStoreZone = false;
+            EventManager.TriggerEvent("ExitStore", null);
         }
     }
 
