@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: -1107309169, guid: 6f7350bca1dc25a46adcd5183daa33d3, type: 3}
   title: Voidbound Crest
-  buyPrice: 0
-  salePrice: 0
+  buyPrice: 10
+  salePrice: 5
   isOwned: 0
   slotType: 1
   spriteLibrary: {fileID: 7108339969198208228, guid: 9b9b0d526a3f00648be732dfc5e9e8c7, type: 3}

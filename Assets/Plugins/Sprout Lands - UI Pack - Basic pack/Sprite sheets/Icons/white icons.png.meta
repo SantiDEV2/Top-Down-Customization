@@ -349,10 +349,10 @@ TextureImporter:
       name: white icons_9
       rect:
         serializedVersion: 2
-        x: 18
-        y: 16
-        width: 12
-        height: 16
+        x: 19
+        y: 18
+        width: 9
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -371,10 +371,10 @@ TextureImporter:
       name: white icons_10
       rect:
         serializedVersion: 2
-        x: 34
+        x: 38
         y: 18
-        width: 13
-        height: 11
+        width: 4
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

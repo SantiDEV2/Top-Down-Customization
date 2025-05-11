@@ -11,7 +11,6 @@ public class Item : ScriptableObject
     public string title;
     public int buyPrice;
     public int salePrice;
-    public bool isOwned;
 
     [Header("Slot type")]
     public SlotType slotType;

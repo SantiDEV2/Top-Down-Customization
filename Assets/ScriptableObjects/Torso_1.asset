@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 696397325, guid: 0dd4469dd1abd2d4b8d472eedba8098c, type: 3}
   title: Celestial Plumage
-  buyPrice: 0
-  salePrice: 0
+  buyPrice: 10
+  salePrice: 5
   isOwned: 0
   slotType: 1
   spriteLibrary: {fileID: 7108339969198208228, guid: cf514c8901f6c534ab81230cc378b080, type: 3}

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: -1439293232, guid: eff987eab074bde468e42e1f5ac2187a, type: 3}
   title: Midnight Fur
-  buyPrice: 0
-  salePrice: 0
+  buyPrice: 10
+  salePrice: 5
   isOwned: 0
   slotType: 1
   spriteLibrary: {fileID: 7108339969198208228, guid: 30446391ac5b4534a84650322c9ea161, type: 3}

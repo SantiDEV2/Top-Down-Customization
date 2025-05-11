@@ -4,8 +4,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [Header("Player Variables")]
-    [SerializeField] private float speed = 4f;
+    private float speed = 4f;
     private Vector2 moveInput;
+
+    [Header("PlayerEconomy")]
+    public int coins = 100;
 
     [Header("References")]
     private Rigidbody2D rb;
@@ -17,9 +20,11 @@ public class PlayerController : MonoBehaviour
     private const string lasthor = "LastHorizontal";
     private const string lastver = "LastVertical";
 
+    [Header("Bools")]
     private bool isInventoryOpen = false;
     private bool isStoreOpen = false;
     private bool isInStoreZone = false;
+    private bool isInClosetZone = false;
 
     private void Start()
     {
@@ -66,7 +71,7 @@ public class PlayerController : MonoBehaviour
 
     private void ShowInventory()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I) && isInClosetZone)
         {
             isInventoryOpen = !isInventoryOpen;
             if (isInventoryOpen)
@@ -92,6 +97,11 @@ public class PlayerController : MonoBehaviour
             isInStoreZone = true;
             EventManager.TriggerEvent("EntryStore", null);
         }
+        if (collision.CompareTag("ClosetZone"))
+        {
+            isInClosetZone = true;
+            EventManager.TriggerEvent("EntryCloset", null);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -100,6 +110,11 @@ public class PlayerController : MonoBehaviour
         {
             isInStoreZone = false;
             EventManager.TriggerEvent("ExitStore", null);
+        }
+        if (collision.CompareTag("ClosetZone"))
+        {
+            isInClosetZone = false;
+            EventManager.TriggerEvent("ExitCloset", null);
         }
     }
 

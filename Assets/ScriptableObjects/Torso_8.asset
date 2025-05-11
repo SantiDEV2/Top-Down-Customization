@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: -67223885, guid: bee3cc6c80197e8489f1871f6acdda85, type: 3}
   title: Emerald Crest
-  buyPrice: 0
-  salePrice: 0
+  buyPrice: 10
+  salePrice: 5
   isOwned: 0
   slotType: 1
   spriteLibrary: {fileID: 7108339969198208228, guid: ec35564a182d06a4f8c9f33c82a50947, type: 3}

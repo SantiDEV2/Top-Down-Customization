@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e7b4b372bb81bbf4fbd98515de5defd6
+guid: 9039b3eb4a1a2e84d833c4c35868cbfb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8240180159295656556
-    second: inventory_example_2_0
+      213: 2731001722924673131
+    second: TrashCan_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: inventory_example_2_0
+      name: TrashCan_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 2
-        width: 296
-        height: 93
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49de5ffadcff4ad80800000000000000
-      internalID: -8240180159295656556
+      spriteID: b68a7e7f89776e520800000000000000
+      internalID: 2731001722924673131
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      inventory_example_2_0: -8240180159295656556
+      TrashCan_0: 2731001722924673131
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

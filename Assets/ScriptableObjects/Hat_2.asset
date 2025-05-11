@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1143481319, guid: 3223284f1635a9e43a2924de01e3fc45, type: 3}
   title: Green Elf Hat
-  buyPrice: 0
-  salePrice: 0
+  buyPrice: 5
+  salePrice: 3
   isOwned: 0
   slotType: 0
   spriteLibrary: {fileID: 7108339969198208228, guid: 36cb193a5015de845b407783187e7b61, type: 3}

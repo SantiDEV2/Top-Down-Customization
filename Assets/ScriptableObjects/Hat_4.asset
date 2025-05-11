@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 168178808, guid: 07dc0f4ee8f3b754cb051dd479a80a05, type: 3}
   title: Organe Elf Hat
-  buyPrice: 0
-  salePrice: 0
+  buyPrice: 5
+  salePrice: 3
   isOwned: 0
   slotType: 0
   spriteLibrary: {fileID: 7108339969198208228, guid: 83578b9a698654146b1245e56756e2fa, type: 3}

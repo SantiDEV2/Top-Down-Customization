@@ -5,7 +5,7 @@ public class GameController : MonoBehaviour
     public static bool isGamePaused = false;
 
     [Header("References")]
-    [SerializeField] private GameObject player;
+    [SerializeField] private PlayerController player;
     [SerializeField] private GameObject houseGrid;
     [SerializeField] private GameObject environmentGrid;
     [SerializeField] private Transform[] spawnPos;
@@ -18,6 +18,23 @@ public class GameController : MonoBehaviour
     private void OnDisable()
     {
         EventManager.StopListening("SceneChange", ChangeEnvironment);
+    }
+
+    public bool SpendCoins(int amount)
+    {
+        if (player.coins >= amount)
+        {
+            player.coins -= amount;
+            EventManager.TriggerEvent("UpdateCoins", player.coins);
+            return true;
+        }
+        return false;
+    }
+
+    public void AddCoins(int amount)
+    {
+        player.coins += amount;
+        EventManager.TriggerEvent("UpdateCoins", player.coins);
     }
 
     private void ChangeEnvironment(object param)

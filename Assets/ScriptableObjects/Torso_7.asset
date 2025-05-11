@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: -2053609970, guid: 51eab5f04c8a74245aacc0c64a57407e, type: 3}
   title: Crimson Guard
-  buyPrice: 0
-  salePrice: 0
+  buyPrice: 10
+  salePrice: 5
   isOwned: 0
   slotType: 1
   spriteLibrary: {fileID: 7108339969198208228, guid: 8f374c7fd7eedf74eb771ff4ecd4b772, type: 3}

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 258492573, guid: a652388039de29e42b64eb88b2ccb6c8, type: 3}
   title: Frostbound Core
-  buyPrice: 0
-  salePrice: 0
+  buyPrice: 10
+  salePrice: 5
   isOwned: 0
   slotType: 1
   spriteLibrary: {fileID: 7108339969198208228, guid: 6ffba1cbb92f76d45852f509ba940ca9, type: 3}

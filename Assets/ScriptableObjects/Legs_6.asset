@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: -722039158, guid: eff987eab074bde468e42e1f5ac2187a, type: 3}
   title: Pawstride Boots
-  buyPrice: 0
-  salePrice: 0
+  buyPrice: 8
+  salePrice: 4
   isOwned: 0
   slotType: 2
   spriteLibrary: {fileID: 7108339969198208228, guid: affba10314e24b94ea271bc050684a70, type: 3}

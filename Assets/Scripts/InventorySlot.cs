@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 
 public class InventorySlot : MonoBehaviour, IDropHandler
 {
-    public enum SlotType { Hat, Torso, Legs, Inventory }
+    public enum SlotType { Hat, Torso, Legs, Inventory, TrashCan }
     public SlotType slotType;
 
     public void OnDrop(PointerEventData eventData)
@@ -40,6 +40,12 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         {
             inventoryItem.parentAfterDrag = transform;
             inventoryController.UpdateSprite(slotType, inventoryItem.item.spriteLibrary);
+        }
+
+        if (slotType == SlotType.TrashCan)
+        {
+            inventoryController.SellItem(inventoryItem.item);
+            Destroy(inventoryItem.gameObject);
         }
     }
 }

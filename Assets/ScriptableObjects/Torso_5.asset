@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: -581418490, guid: ef0fd23cee1220a48b1078f19163554a, type: 3}
   title: Sunfire Tunic
-  buyPrice: 0
-  salePrice: 0
+  buyPrice: 10
+  salePrice: 5
   isOwned: 0
   slotType: 1
   spriteLibrary: {fileID: 7108339969198208228, guid: cfc10f4ac13880243bc14f2d2e489838, type: 3}

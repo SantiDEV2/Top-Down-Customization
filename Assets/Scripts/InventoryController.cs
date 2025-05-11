@@ -27,6 +27,12 @@ public class InventoryController : MonoBehaviour
         return false;
     }
 
+    public void SellItem(Item item)
+    {
+        StoreController storeController = FindFirstObjectByType<StoreController>();
+        storeController.SellItem(item);
+    }
+
     public void SpawnNewItem(Item item, InventorySlot slot)
     {
         GameObject newItem = Instantiate(inventoryItemPrefab, slot.transform);
