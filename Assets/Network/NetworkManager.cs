@@ -1,11 +1,25 @@
 using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.UI;
 using TMPro;
+using System;
+using System.IO;
 
-public class Login : MonoBehaviour
+[Serializable]
+public class Login
+{
+    public string status;
+    public int id;
+    public string name;
+}
+
+[Serializable]
+public class GetProducts
+{
+}
+
+
+public class NetworkManager : MonoBehaviour
 {
     private string baseUrl = "http://localhost:8080/";
 
@@ -18,15 +32,21 @@ public class Login : MonoBehaviour
         spriteRenderer.color = Color.gray;
     }
 
-    public void tryLogin ()
+    public void tryLogin()
     {
+
         string username = txtUser.text;
         string password = txtPass.text;
+
 
         if (username != "" && password != "")
             StartCoroutine(testPost(username, password));
         else
             spriteRenderer.color = Color.red;
+    }
+
+    public void getProducts()
+    {
     }
 
     IEnumerator testPost(string username, string password)
@@ -46,10 +66,13 @@ public class Login : MonoBehaviour
         }
         else
         {
-            //Debug.Log("Send to the server");
             Debug.Log(www.downloadHandler.text);
             txtLogger.text = "server: " + www.downloadHandler.text;
-            //Debug.Log(www.result);
+            string json = www.downloadHandler.text;
+
+            Login myLogin = JsonUtility.FromJson<Login>(json);
+            if (myLogin.status != "valid") yield return null ;
+            PlayerPrefs.SetInt("idUser", myLogin.id);
         }
     }
 }

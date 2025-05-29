@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Hat_1
   m_EditorClassIdentifier: 
   icon: {fileID: 1228404425, guid: 2e360fce671feee44a11e56f2acee504, type: 3}
+  id: 1
   title: Santa Hat
   buyPrice: 90
   salePrice: 300

@@ -6,6 +6,7 @@ public class Item : ScriptableObject
 {
     [Header("References")]
     public Sprite icon;
+    public int id;
 
     [Header("Variables")]
     public string title;

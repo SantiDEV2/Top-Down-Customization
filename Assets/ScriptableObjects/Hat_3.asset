@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Hat_3
   m_EditorClassIdentifier: 
   icon: {fileID: 450023052, guid: e4e1247ccf49cd449bbe375c1a62a111, type: 3}
+  id: 3
   title: Blue Elf Hat
   buyPrice: 5
   salePrice: 3
-  isOwned: 0
   slotType: 0
   spriteLibrary: {fileID: 7108339969198208228, guid: 825ca843fbfcb8e4fb18489d35a33d2a, type: 3}

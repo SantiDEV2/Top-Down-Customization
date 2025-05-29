@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Hat_6
   m_EditorClassIdentifier: 
   icon: {fileID: -1311024556, guid: 3a6460213cf63d64cbfa8b14b13395a2, type: 3}
+  id: 6
   title: Purple Elf Hat
   buyPrice: 5
   salePrice: 3
-  isOwned: 0
   slotType: 0
   spriteLibrary: {fileID: 7108339969198208228, guid: 1ba4e05f8609bc0429bb13215df02716, type: 3}

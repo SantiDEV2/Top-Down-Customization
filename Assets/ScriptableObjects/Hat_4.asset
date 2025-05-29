@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Hat_4
   m_EditorClassIdentifier: 
   icon: {fileID: 168178808, guid: 07dc0f4ee8f3b754cb051dd479a80a05, type: 3}
+  id: 4
   title: Orange Elf Hat
   buyPrice: 5
   salePrice: 3

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Hat_7
   m_EditorClassIdentifier: 
   icon: {fileID: 1395882217, guid: aa9b93fa4e3c28744a2988d7aaa45371, type: 3}
+  id: 7
   title: Pink Elf Hat
   buyPrice: 5
   salePrice: 3
-  isOwned: 0
   slotType: 0
   spriteLibrary: {fileID: 7108339969198208228, guid: 5a12fdb1af892fb4db8bc3f66497c599, type: 3}
