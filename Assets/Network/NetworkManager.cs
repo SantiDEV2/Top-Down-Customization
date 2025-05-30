@@ -30,8 +30,24 @@ public class NetworkManager : MonoBehaviour
 
     public TMP_InputField txtUser, txtPass;
     public SpriteRenderer spriteRenderer;
+    public Canvas loginCanvas;
 
     public static int[] ids;
+
+    private void Awake()
+    {
+        if (PlayerPrefs.GetInt("idUser") == null || PlayerPrefs.GetInt("idUser") == 0)
+        {
+            GameController.isGamePaused = true;
+            loginCanvas.enabled = true;
+        }
+        else
+        {
+            GameController.isGamePaused=false;
+            loginCanvas.enabled = false;
+            GetProducts();
+        }
+    }
 
     public void Login()
     {
@@ -69,6 +85,7 @@ public class NetworkManager : MonoBehaviour
             Login myLogin = JsonUtility.FromJson<Login>(json);
             if (myLogin.status != "valid") yield return null ;
             PlayerPrefs.SetInt("idUser", myLogin.id);
+            loginCanvas.enabled = false;
             GetProducts();
         }
     }
@@ -95,6 +112,7 @@ public class NetworkManager : MonoBehaviour
                 InventoryController.productIds[i] = ProductsData.ownedProducts[i].idProduct;
             }
             EventManager.TriggerEvent("GetDbInfo", null);
+            GameController.isGamePaused = false;
         }
     }
 }

@@ -50,6 +50,10 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat(lasthor, moveInput.x);
             animator.SetFloat(lastver, moveInput.y);
         }
+
+        if (Input.GetKeyDown(KeyCode.Backspace)) {
+            PlayerPrefs.DeleteAll();
+        }
     }
 
     private void ShowStore()
@@ -71,7 +75,7 @@ public class PlayerController : MonoBehaviour
 
     private void ShowInventory()
     {
-        if (Input.GetKeyDown(KeyCode.I) && isInClosetZone)
+        if (Input.GetKeyDown(KeyCode.I))
         {
             isInventoryOpen = !isInventoryOpen;
             if (isInventoryOpen)
@@ -99,7 +103,6 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.CompareTag("ClosetZone"))
         {
-            isInClosetZone = true;
             EventManager.TriggerEvent("EntryCloset", null);
         }
     }
