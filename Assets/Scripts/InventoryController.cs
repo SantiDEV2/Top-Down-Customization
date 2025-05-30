@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
 
@@ -11,6 +12,38 @@ public class InventoryController : MonoBehaviour
     [SerializeField] private SpriteLibrary hatLibrary;
     [SerializeField] private SpriteLibrary torsoLibrary;
     [SerializeField] private SpriteLibrary legsLibrary;
+
+    [Header("Item Database")]
+    [SerializeField] private Item[] items;
+
+    public static int[] productIds;
+
+    private void OnEnable()
+    {
+        EventManager.StartListening("GetDbInfo", AddItemByProductId);
+    }
+
+    private void OnDisable()
+    {
+        EventManager.StopListening("GetDbInfo", AddItemByProductId);
+    }
+
+    private void AddItemByProductId(object param)
+    {
+        Debug.Log(productIds.Length);
+        for (int i = 0; i < productIds.Length; i++)
+        {
+            for(int j = 0; j < items.Length; j++)
+            {
+                if (productIds[i] == items[j].id)
+                {
+                    AddItem(items[j]);
+                    Debug.Log($"Item with ID {productIds[i]} added to inventory.");
+                    break;
+                }
+            }
+        }
+    }
 
     public bool AddItem(Item item)
     {

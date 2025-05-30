@@ -4114,7 +4114,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 29661.193}
+  m_AnchoredPosition: {x: 0, y: 34588.996}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &287383863
@@ -48036,10 +48036,17 @@ MonoBehaviour:
   - {fileID: 813249552}
   - {fileID: 1522137103}
   inventoryItemPrefab: {fileID: 5538476739454694668, guid: 738e426fb60654e4c9051a61321c328b, type: 3}
-  networkManager: {fileID: 0}
   hatLibrary: {fileID: 1973484917}
   torsoLibrary: {fileID: 1039930308}
   legsLibrary: {fileID: 455411445}
+  items:
+  - {fileID: 11400000, guid: 159d358b94f5b1d4dbeb286c6196ba18, type: 2}
+  - {fileID: 11400000, guid: f8b33026d1c4631489548d6149b6a7b1, type: 2}
+  - {fileID: 11400000, guid: 3bad857d4e8342b42a38cbccf79130c5, type: 2}
+  - {fileID: 11400000, guid: 2d2f5af9762ca60479ab114d308ccec8, type: 2}
+  - {fileID: 11400000, guid: c92fb67b92f9cd34d9771dd6c232eb54, type: 2}
+  - {fileID: 11400000, guid: eba31c52a243a2842b49454aeadac483, type: 2}
+  - {fileID: 11400000, guid: 034d33493ec65e0409d91f265c8a65dc, type: 2}
 --- !u!114 &2143664290
 MonoBehaviour:
   m_ObjectHideFlags: 0

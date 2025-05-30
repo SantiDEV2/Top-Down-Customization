@@ -24,7 +24,6 @@ public class ProductsData
     public GetProducts[] ownedProducts;
 }
 
-
 public class NetworkManager : MonoBehaviour
 {
     private string baseUrl = "http://localhost:8080/";
@@ -33,10 +32,6 @@ public class NetworkManager : MonoBehaviour
     public SpriteRenderer spriteRenderer;
 
     public static int[] ids;
-    void Start()
-    {
-        spriteRenderer.color = Color.gray;
-    }
 
     public void Login()
     {
@@ -46,7 +41,7 @@ public class NetworkManager : MonoBehaviour
         if (username != "" && password != "")
             StartCoroutine(LoginRequest(username, password));
         else
-            spriteRenderer.color = Color.red;
+            Debug.LogError("Username or password cannot be empty.");
     }
 
     public void GetProducts()
@@ -69,7 +64,6 @@ public class NetworkManager : MonoBehaviour
         }
         else
         {
-            Debug.Log(www.downloadHandler.text);
             string json = www.downloadHandler.text;
 
             Login myLogin = JsonUtility.FromJson<Login>(json);
@@ -92,14 +86,15 @@ public class NetworkManager : MonoBehaviour
         }
         else
         {
-            Debug.Log(www.downloadHandler.text);
             string json = www.downloadHandler.text;
             ProductsData ProductsData = JsonUtility.FromJson<ProductsData>(json);
+            InventoryController.productIds = new int[ProductsData.ownedProducts.Length];
 
-            for(int i = 0; i < ProductsData.ownedProducts.Length; i++)
+            for (int i = 0; i < ProductsData.ownedProducts.Length; i++)
             {
-                Debug.Log(ProductsData.ownedProducts[i].idProduct);
+                InventoryController.productIds[i] = ProductsData.ownedProducts[i].idProduct;
             }
+            EventManager.TriggerEvent("GetDbInfo", null);
         }
     }
 }
